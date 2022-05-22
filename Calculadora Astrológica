@@ -1,0 +1,30 @@
+print("Essa é uma calculadora astrologica e com ela vou te informar qual o seu signo!")
+dia = int(input("Por favor, qual dia você nasceu? "))
+mes = input("De qual mês? ").lower()
+
+if mes == 'março':
+    signo = 'Áries' if (dia >= 21) else 'Peixes'
+elif mes == 'abril':
+    signo = 'Touro' if (dia >= 21) else 'Áries'
+elif mes == 'maio':
+    signo = 'Gêmeos' if (dia >= 21) else 'Touro'
+elif mes == 'junho':
+    signo = 'Câncer' if (dia >= 21) else 'Gêmeos'
+elif mes == 'julho':
+    signo = 'Leão' if (dia >= 23) else 'Câncer'
+elif mes == 'agosto':
+    signo = 'Virgem' if (dia >= 23) else 'Leão'
+elif mes == 'setembro':
+    signo = 'Libra' if (dia >= 23) else 'Virgem'
+elif mes == 'outubro':
+    signo = 'Escorpião' if (dia >= 23) else 'Libra'
+elif mes == 'novembro':
+    signo = 'Sagitário' if (dia >= 22) else 'Escorpião'
+elif mes == 'dezembro':
+    signo = 'Capricórnio' if (dia >= 22) else 'Sagitário'
+elif mes == 'janeiro':
+    signo = 'Aquário' if (dia >= 21) else 'Capricórnio'
+elif mes == 'fevereiro':
+    signo = 'Peixes' if (dia >= 19) else 'Aquário'
+
+print(f"O seu signo é {signo}")
