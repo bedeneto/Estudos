@@ -1,0 +1,26 @@
+import random
+
+
+def play():
+    usuario = input("Escolha 'pedra', 'papel' ou 'tesoura': ")
+    pc = random.choice(['pedra', 'papel', 'tesoura'])
+
+    if usuario == pc:
+        return 'É um empate.'
+
+    # pedra > tesoura, tesoura > papel, papel > pedra
+    if venceu(usuario, pc):
+        return 'Você venceu!'
+
+    return 'Você perdeu...'
+
+
+def venceu(usuario, pc):
+
+    if (usuario == 'pedra' and pc == 'tesoura') \
+            or (usuario == 'tesoura' and pc == 'papel') \
+            or (usuario == 'papel' and pc == 'pedra'):
+        return True
+
+
+print(play())
