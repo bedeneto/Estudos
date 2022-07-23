@@ -1,0 +1,32 @@
+import PySimpleGUI as sg
+senha = '1q2w3e'
+
+
+sg.theme('Reddit')
+
+layout =[   [sg.Text("Tela de Login - Infinity School")],
+            [sg.Text('Login:   '), sg.Input(key='login usuário')],
+            [sg.Text('Senha: '), sg.Input(key='senha usuário', password_char='*')],
+            [sg.Checkbox('Salvar senha?'), sg.Checkbox('Mostrar senha?', default=False)],
+            [sg.Button('Login'), sg.Button('Sair')] ]
+
+window = sg.Window('Tela de login', layout)
+
+while True:
+    event, values = window.read()
+    if event == sg.WIN_CLOSED or event == 'Sair':
+        break
+
+    if event == 'Mostrar senha?':
+        if sg.Checkbox('Mostrar senha?') == True:
+            sg.Input(key='senha usuário', password_char='')
+            
+
+    if event == 'Login':
+        if values['login usuário'] == 'Bedeneto' and values['senha usuário'] == senha:
+            print('Login feito')
+
+
+
+
+window.close()
